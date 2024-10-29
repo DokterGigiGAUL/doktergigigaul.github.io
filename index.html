@@ -235,41 +235,44 @@
             font-size: 1.4em;
         }
 
+         /* Styling for the testimonials section */
         .testimonials-section {
             padding: 2rem 0;
             background-color: #f4f4f4;
             text-align: center;
         }
-        
-        .carousel {
-            display: flex;
-            overflow: hidden;
-            width: 80%;
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden; /* Hide overflow content */
             margin: 0 auto;
             position: relative;
         }
-        
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
         .carousel-card {
-            min-width: 90%;
+            flex: 0 0 85%; /* 85% width for the visible card */
+            margin-right: 15px; /* Space for the next card to peek */
             box-sizing: border-box;
-            margin-right: 1rem;
             padding: 2rem;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease-in-out;
         }
-        
+
         .carousel-card p {
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
-        
+
         .carousel-card h4 {
             font-size: 1rem;
             color: #333;
         }
-
     </style>
 </head>
 <body>
@@ -342,46 +345,40 @@
         </section>
 
 <section id="testimonials" class="testimonials-section">
-    <div>
         <h2>Testimonials</h2>
-        <div class="carousel">
-            <div class="carousel-card">
-                <p>"Great event! I learned so much and can't wait for the next one!"</p>
-                <h4>- John Doe</h4>
-            </div>
-            <div class="carousel-card">
-                <p>"Amazing speakers and very informative sessions. Highly recommend!"</p>
-                <h4>- Jane Smith</h4>
-            </div>
-            <div class="carousel-card">
-                <p>"Well-organized and great networking opportunities. Loved every bit!"</p>
-                <h4>- Mike Johnson</h4>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-card">
+                    <p>"Great event! I learned so much and can't wait for the next one!"</p>
+                    <h4>- John Doe</h4>
+                </div>
+                <div class="carousel-card">
+                    <p>"Amazing speakers and very informative sessions. Highly recommend!"</p>
+                    <h4>- Jane Smith</h4>
+                </div>
+                <div class="carousel-card">
+                    <p>"Well-organized and great networking opportunities. Loved every bit!"</p>
+                    <h4>- Mike Johnson</h4>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <script>
-let currentIndex = 0;
+        let currentIndex = 0;
 
-function showNextCard() {
-    const cards = document.querySelectorAll('.carousel-card');
-    currentIndex++;
+        function showNextCard() {
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.carousel-card');
+            currentIndex = (currentIndex + 1) % cards.length;
 
-    if (currentIndex >= cards.length) {
-        currentIndex = 0;
-    }
+            const offset = -(currentIndex * (cards[0].offsetWidth + 15)); // Offset calculation with margin
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
 
-    // Adjust transform property to slide the cards
-    const offset = -(currentIndex * (cards[0].offsetWidth + 16)); // +16 for margin-right
-    document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
-}
-
-// Run the function to change cards every 3 seconds
-setInterval(showNextCard, 2000);
-
-</script>
+        setInterval(showNextCard, 2000); // Change every 2 seconds
+    </script>
     
 <script>
   // Set the date we're counting down to
