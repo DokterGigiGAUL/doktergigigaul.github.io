@@ -72,6 +72,7 @@
         .sectionn {
             margin: 10px 0px 0px;
             padding:30px;
+            background:#333333;
         }
         .sectionn h2 {
             letter-spacing:-0.5px;
@@ -233,6 +234,42 @@
         .whatsapp-button i {
             font-size: 1.4em;
         }
+
+        .testimonials-section {
+    padding: 2rem 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-card {
+    min-width: 80%;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    border:1px solid #ccc;
+}
+
+.carousel-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-card h4 {
+    font-size: 1rem;
+    color: #333;
+}
     </style>
 </head>
 <body>
@@ -263,7 +300,7 @@
             <h2 style="margin-top:0px;">Materi</h2>
             <p style="text-align:center;">Dalam 240 menit kamu akan mengetahui:</p> 
             <p style="margin-bottom:15px;text-align:center;">• Dasar Hipnoterapi • Tehnik Hipnoterapi Dental Sederhana dan Efektif • Aplikasi Dental Hipnoterapi • Tips Praktis Berdasarkan Pengalaman Ahli</p>
-            <p style="text-align:center;">Bonus:<br/><span style="color:#007acc;"><i class="fa-solid fa-comments"></i></span>&nbsp; Sesi Tanya Jawab Interaktif</p>
+            <p style="text-align:center;">Bonus:<br/><span style="color:#ffffff;"><i class="fa-solid fa-comments"></i></span>&nbsp; Sesi Tanya Jawab Interaktif</p>
         </section>
 
         <section class="section">
@@ -303,7 +340,46 @@
          <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
 
         </section>
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <div class="carousel">
+            <div class="carousel-card">
+                <p>"Great event! I learned so much and can't wait for the next one!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="carousel-card">
+                <p>"Amazing speakers and very informative sessions. Highly recommend!"</p>
+                <h4>- Jane Smith</h4>
+            </div>
+            <div class="carousel-card">
+                <p>"Well-organized and great networking opportunities. Loved every bit!"</p>
+                <h4>- Mike Johnson</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
+    <script>
+let currentIndex = 0;
+
+function showNextCard() {
+    const cards = document.querySelectorAll('.carousel-card');
+    currentIndex++;
+
+    if (currentIndex >= cards.length) {
+        currentIndex = 0;
+    }
+
+    // Adjust transform property to slide the cards
+    const offset = -(currentIndex * (cards[0].offsetWidth + 16)); // +16 for margin-right
+    document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
+}
+
+// Run the function to change cards every 3 seconds
+setInterval(showNextCard, 2000);
+</script>
+    
 <script>
   // Set the date we're counting down to
   var countDownDate = new Date("Nov 15, 2024 00:00:00").getTime();
