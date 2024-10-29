@@ -243,6 +243,7 @@
 
 .carousel {
     display: flex;
+    overflow:hidden;
     width: 90%;
     margin: 0 auto;
     position: relative;
@@ -371,12 +372,13 @@ function showNextCard() {
     }
 
     // Adjust transform property to slide the cards
-    const offset = -(currentIndex * 100); // 100% to match card width
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    const offset = -(currentIndex * (cards[0].offsetWidth + 16)); // +16 for margin-right
+    document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
 }
 
 // Run the function to change cards every 3 seconds
-setInterval(showNextCard, 3000);
+setInterval(showNextCard, 2000);
+
 
 </script>
     
