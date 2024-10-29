@@ -236,40 +236,40 @@
         }
 
         .testimonials-section {
-    padding: 2rem 0;
-    background-color: #f0f0f0;
-    text-align: center;
-}
+            padding: 2rem 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .carousel-card {
+            min-width: 80%;
+            box-sizing: border-box;
+            margin-right: 1rem;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-card h4 {
+            font-size: 1rem;
+            color: #333;
+        }
 
-.carousel {
-    display: flex;
-    overflow:hidden;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.carousel-card {
-    min-width: 100%;
-    box-sizing: border-box;
-    margin-right: 1rem;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-    border:1px solid #ccc;
-}
-
-.carousel-card p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.carousel-card h4 {
-    font-size: 1rem;
-    color: #333;
-}
     </style>
 </head>
 <body>
@@ -340,11 +340,11 @@
          <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089313821_6f17bca14c_h.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
 
         </section>
-        <div class="container">
-        <h2>Testimonials</h2>
-    </div>
+
 <section id="testimonials" class="testimonials-section">
-     <div class="carousel">
+    <div>
+        <h2>Testimonials</h2>
+        <div class="carousel">
             <div class="carousel-card">
                 <p>"Great event! I learned so much and can't wait for the next one!"</p>
                 <h4>- John Doe</h4>
@@ -358,7 +358,9 @@
                 <h4>- Mike Johnson</h4>
             </div>
         </div>
+    </div>
 </section>
+
 
     <script>
 let currentIndex = 0;
@@ -377,8 +379,7 @@ function showNextCard() {
 }
 
 // Run the function to change cards every 3 seconds
-setInterval(showNextCard, 2000);
-
+setInterval(showNextCard, 3000);
 
 </script>
     
