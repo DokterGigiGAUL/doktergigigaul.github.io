@@ -237,13 +237,13 @@
 
         .testimonials-section {
     padding: 2rem 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     text-align: center;
 }
 
 .carousel {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
 }
@@ -371,12 +371,13 @@ function showNextCard() {
     }
 
     // Adjust transform property to slide the cards
-    const offset = -(currentIndex * (cards[0].offsetWidth + 16)); // +16 for margin-right
-    document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
+    const offset = -(currentIndex * 100); // 100% to match card width
+    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
 }
 
 // Run the function to change cards every 3 seconds
-setInterval(showNextCard, 2000);
+setInterval(showNextCard, 3000);
+
 </script>
     
 <script>
