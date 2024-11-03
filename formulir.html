@@ -152,8 +152,7 @@
   </div>
 
   <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+    function submitForm() {
 
       // Simpan data dan arahkan ke halaman konfirmasi
       const email = document.getElementById('email').value;
@@ -170,7 +169,7 @@
       formData.append('whatsapp', whatsapp);
       formData.append('status', status);
       formData.append('bukti', bukti);
-
+    }
       fetch('https://script.google.com/macros/s/AKfycbzdk-6syKxBWLwFZ3GwjxPmPqmzOly9dGLozBFehWuBPUUDbzfFQxsow9ya9KJkmoTW/exec', {
         method: 'POST',
         headers: {
