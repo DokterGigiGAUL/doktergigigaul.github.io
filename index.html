@@ -337,26 +337,36 @@
     .card-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 2rem;
+            justify-content: center;
         }
     .card {
             background-color:#ffffff;
             border: 0px solid #ddd;
             border-radius: 15px;
             /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
-            padding: 20px;
+            padding: 1.5rem;
             text-align: center;
+            flex: 1 1 300px;
+            max-width: 350px;
         }
     .card h3 {
             margin-top: 0;
         font-size:1.3em;
         }
-    .card-half {
-            flex: 1 1 calc(50% - 10px); /* Setengah lebar */
+    /* Mobile styles - cards will stack */
+        @media (max-width: 600px) {
+            .card {
+                flex: 1 1 100%;
+            }
         }
-   .card-full {
-            flex: 1 1 100%; /* Lebar penuh */
-        } 
+
+        /* Tablet and desktop styles - cards will be side by side */
+        @media (min-width: 600px) {
+            .card {
+                flex: 1 1 30%;
+            }
+        }
 
 
    /* @media only screen and (min-width: 600px) {}*/
@@ -386,21 +396,21 @@
     <div class="container" style="margin-top:10px;">
         <section class="section" style="background-color: #00919115;padding-top:0px;">
         <h2 style="padding-top:20px;color:#111111;">Materi</h2>
-        <div class="card-container">
-            <div class="card card-half">
-                <h3>Pemanfaatan Artificial Intelligence dalam Penyakit Mulut</h3>
-                <p>Dari diagnosis hingga perawatan, bagaimana AI memengaruhi pendekatan kita dalam ilmu penyakit mulut.</p>
+            <div class="card-container">
+                <div class="card card-half">
+                    <h3>Pemanfaatan Artificial Intelligence dalam Penyakit Mulut</h3>
+                    <p>Dari diagnosis hingga perawatan, bagaimana AI memengaruhi pendekatan kita dalam ilmu penyakit mulut.</p>
+                </div>
+                <div class="card card-half">
+                    <h3>Penerapan Artificial Intelligence di Radiologi Kedokteran Gigi</h3>
+                    <p>Tingkatkan akurasi radiografi dengan teknologi AI - Apakah ini masa depan yang kita cari?</p>
+                </div>
+                <div class="card card-full">
+                    <h3>Aspek Etika Penggunaan Artificial Intelligence oleh Dokter Gigi</h3>
+                    <p>Panduan etika bagi dokter gigi dalam menghadapi inovasi AI, dari aspek hukum hingga tanggung jawab profesional.</p>
+                </div>
             </div>
-            <div class="card card-half">
-                <h3>Penerapan Artificial Intelligence di Radiologi Kedokteran Gigi</h3>
-                <p>Tingkatkan akurasi radiografi dengan teknologi AI - Apakah ini masa depan yang kita cari?</p>
-            </div>
-            <div class="card card-full">
-                <h3>Aspek Etika Penggunaan Artificial Intelligence oleh Dokter Gigi</h3>
-                <p>Panduan etika bagi dokter gigi dalam menghadapi inovasi AI, dari aspek hukum hingga tanggung jawab profesional.</p>
-            </div>
-        </div>
-    </section>
+        </section>
         
         <section class="section">
             <h2 style="margin-top:0px;">Benefit</h2>
@@ -413,53 +423,52 @@
             <p style="text-align:center;padding-top:15px;"><span style="color:#009191;"><i class="fa-solid fa-user-doctor"></i></span>&nbsp; Dokter Gigi Umum&nbsp;&nbsp;&nbsp;&nbsp;- Rp. 100.000,-<br/><span style="color:#006161;"><i class="fa-solid fa-user-doctor"></i></span>&nbsp; Dokter Gigi Spesialis - Rp. 120.000,-</p>
           <!--  <p style="margin-bottom:10px;text-align:center;"><span style="color:#006600;"><i class="fas fa-user-md"></i><i class="fa-solid fa-money-bill"></i></span>&nbsp;  Rp.100.000,-</p>-->
         </section>
-
     </div>
-        <div class="cta-button-container" style="margin-bottom:0px;">
-            <a href="https://doktergigigaul.github.io/registrasi" target="_blank" class="cta"><span style="color:#ffffff;"><i class="fa-solid fa-user-plus"></i></span>&nbsp;Daftar sekarang</a>
-            <p style="font-size:11px;padding-top:5px;margin-top:0px;">Jangan sampai kehabisan tempat. Kuota terbatas!</p>
-        </div>
+    
+    <div class="cta-button-container" style="margin-bottom:0px;">
+        <a href="https://doktergigigaul.github.io/registrasi" target="_blank" class="cta"><span style="color:#ffffff;"><i class="fa-solid fa-user-plus"></i></span>&nbsp;Daftar sekarang</a>
+        <p style="font-size:11px;padding-top:5px;margin-top:0px;">Jangan sampai kehabisan tempat. Kuota terbatas!</p>
+    </div>
     
     <div class="container">
         <section class="share-webinar">
-    <h2><span style="color:#111111;padding-top:10px;">Ajak Sejawat Lainnya</span></h2>
-    <p><span style="color:#111111;">Ayo bagikan webinar ini dan ajak teman sejawat yang lain untuk bergabung bersama! <i><br/>Because sharing is caring..</i></span></p>
-    <img src="https://live.staticflickr.com/65535/54079820089_8b2d507ccd_c.jpg" alt="Poster Webinar Gigital" class="webinar-poster">
+        <h2><span style="color:#111111;padding-top:10px;">Ajak Sejawat Lainnya</span></h2>
+        <p><span style="color:#111111;">Ayo bagikan webinar ini dan ajak teman sejawat yang lain untuk bergabung bersama! <i><br/>Because sharing is caring..</i></span></p>
+        <img src="https://live.staticflickr.com/65535/54079820089_8b2d507ccd_c.jpg" alt="Poster Webinar Gigital" class="webinar-poster">
         <p><span style="color:#111111;">Bagikan dengan:</i></span></p>
-
-    <div class="share-buttons">
-        <!-- WhatsApp Share Button -->
-        <a href="https://api.whatsapp.com/send?text=Yuk, ikuti webinar Gigital! %0A%0ATema: DENTAL HIPNOSIS%0A%0ADaftar sekarang di https://bit.ly/CALM2024"
-           target="_blank" class="share-button whatsapp"><span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-whatsapp"></i>&nbsp; WhatsApp</span></a>
-
-        <!-- Facebook Share Button -->
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/CALM2024" target="_blank" class="share-button facebook">
-            <span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-facebook"></i></i>&nbsp; Facebook</span></a>
-
-        <!-- Twitter Share Button -->
-        <a href="https://twitter.com/intent/tweet?text=Ikuti webinar Gigital tentang DENTAL HIPNOSIS! Daftar di https://bit.ly/CALM2024" target="_blank" class="share-button twitter">
-            <span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-twitter"></i></i></i>&nbsp; Twitter/X</span></a>
-    </div>
+            <div class="share-buttons">
+                <!-- WhatsApp Share Button -->
+                <a href="https://api.whatsapp.com/send?text=Yuk, ikuti webinar Gigital! %0A%0ATema: DENTAL HIPNOSIS%0A%0ADaftar sekarang di https://bit.ly/CALM2024"
+                   target="_blank" class="share-button whatsapp"><span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-whatsapp"></i>&nbsp; WhatsApp</span></a>
+        
+                <!-- Facebook Share Button -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/CALM2024" target="_blank" class="share-button facebook">
+                    <span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-facebook"></i></i>&nbsp; Facebook</span></a>
+        
+                <!-- Twitter Share Button -->
+                <a href="https://twitter.com/intent/tweet?text=Ikuti webinar Gigital tentang DENTAL HIPNOSIS! Daftar di https://bit.ly/CALM2024" target="_blank" class="share-button twitter">
+                    <span style="color:#ffffff;font-size:0.9em;"><i class="fa-brands fa-twitter"></i></i></i>&nbsp; Twitter/X</span></a>
+            </div>
         </section>
         
         <section id="testimonials" class="testimonials-section">
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-card">
-                    <p>"Topik webinarnya keren-keren! Gak sabar buat nunggu topik webinar Gigital selanjutnya"</p>
-                    <h4><strong>Wawan - Kab. Soreang</h4></strong>
-                </div>
-                <div class="carousel-card">
-                    <p>"Pembicaranya luar biasa dan sangat informatif. Highly recommended!"</p>
-                    <h4><strong>Ni Komang - Bali</h4></strong>
-                </div>
-                <div class="carousel-card">
-                    <p>"Sangat terorganisir dan membuka peluang jejaring baru.Suka banget!"</p>
-                    <h4><strong>Eduardo - Timor Leste</h4></strong>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-card">
+                        <p>"Topik webinarnya keren-keren! Gak sabar buat nunggu topik webinar Gigital selanjutnya"</p>
+                        <h4><strong>Wawan - Kab. Soreang</h4></strong>
+                    </div>
+                    <div class="carousel-card">
+                        <p>"Pembicaranya luar biasa dan sangat informatif. Highly recommended!"</p>
+                        <h4><strong>Ni Komang - Bali</h4></strong>
+                    </div>
+                    <div class="carousel-card">
+                        <p>"Sangat terorganisir dan membuka peluang jejaring baru.Suka banget!"</p>
+                        <h4><strong>Eduardo - Timor Leste</h4></strong>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <section style="padding:0px 30px 30px;margin:0px 0;text-align:center;background:#00919115;">
             <h2 style="padding-top:15px;font-size:1.8em;font-weight:800;">Kontak</h2>
@@ -478,10 +487,10 @@
             </header> -->
         </section>
 
-    <section class="section">
+        <section class="section">
         <h2 style="margin-top:0px;">Previous Events Partners</h2>
-                <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089848110_abf519c861_b.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
-    </section>
+            <a href="https://gigital.site" target="_blank"><img src="https://live.staticflickr.com/65535/54089848110_abf519c861_b.jpg" width="900" height="444" alt="Banner Webinar" class="hero-image"></a>
+        </section>
     </div>
     
     <script>
