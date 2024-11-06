@@ -50,12 +50,7 @@
             object-fit: cover;
             margin: 0px auto 5px;
         }
-        .hero-image2 {
-            max-width: 100%;
-            height: 50vw;
-            object-fit: cover;
-            margin: 0px auto 5px;
-        }
+       
         .container {
             max-width: 900px;
             margin: auto;
@@ -306,13 +301,7 @@
         margin-top:0px;
     }
 
-    .webinar-poster {
-        max-width: 100%;
-        height: auto;
-        margin: 20px 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+
 
     .share-buttons {
         display: flex;
@@ -359,12 +348,38 @@
             .card {
                 flex: 1 1 100%;
             }
+            .hero-image2 {
+                max-width: 100%;
+                height: 50vw;
+                object-fit: cover;
+                margin: 0px auto 5px;
+            }
+            .webinar-poster {
+                max-width: 100%;
+                height: auto;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
         }
 
         /* Tablet and desktop styles - cards will be side by side */
         @media (min-width: 600px) {
             .card {
                 flex: 1 1 30%;
+            }
+            .hero-image2 {
+                max-width: 100%;
+                height: 25vw;
+                object-fit: cover;
+                margin: 0px auto 5px;
+            }
+            .webinar-poster {
+                max-width: 50%;
+                height: auto;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
         }
 
@@ -402,13 +417,14 @@
                     <p>Dari diagnosis hingga perawatan, bagaimana AI memengaruhi pendekatan kita dalam ilmu penyakit mulut.</p>
                 </div>
                 <div class="card card-half">
-                    <h3>Penerapan Artificial Intelligence di Radiologi Kedokteran Gigi</h3>
-                    <p>Tingkatkan akurasi radiografi dengan teknologi AI - Apakah ini masa depan yang kita cari?</p>
-                </div>
-                <div class="card card-full">
                     <h3>Aspek Etika Penggunaan Artificial Intelligence oleh Dokter Gigi</h3>
                     <p>Panduan etika bagi dokter gigi dalam menghadapi inovasi AI, dari aspek hukum hingga tanggung jawab profesional.</p>
                 </div>
+          <!--      <div class="card card-half">
+                    <h3>Penerapan Artificial Intelligence di Radiologi Kedokteran Gigi</h3>
+                    <p>Tingkatkan akurasi radiografi dengan teknologi AI - Apakah ini masa depan yang kita cari?</p>
+                </div>-->
+                
             </div>
         </section>
         
