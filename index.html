@@ -267,6 +267,11 @@
             transition: transform 0.5s ease-in-out;
         }
 
+        .carousel1 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
         .carousel-card {
             flex: 0 0 85%; /* 85% width for the visible card */
             margin-right: 20px; /* Space for the next card to peek */
@@ -304,8 +309,6 @@
             color: #111111;
         margin-top:0px;
     }
-
-
 
     .share-buttons {
         display: flex;
@@ -497,12 +500,12 @@
           <h2 style="margin-top:0px;">Event Sebelumnya</h2>
              <section id="testimonials" class="testimonials-section" style="margin:0px -45px 0 -15px;padding:0 15px;">
             <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-card1" style="">
+                <div class="carousel1">
+                    <div class="carousel-card1">
                         <a href="https://desty.page/gigital" target="_blank">
                 <img src="https://live.staticflickr.com/65535/54121623702_343f6e5388_k.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;height:auto!important;"></a>
                     </div>
-                    <div class="carousel-card1" style="">
+                    <div class="carousel-card1">
                         <a href="https://desty.page/gigital" target="_blank">
                 <img src="https://live.staticflickr.com/65535/54122848649_38ab752300_k.jpg" alt="Banner Webinar" class="hero-image" style="margin-bottom:0px;height:auto!important;"></a>
                     </div>
@@ -576,7 +579,7 @@
         let currentIndex = 0;
 
         function showNextCard() {
-            const carousel = document.querySelector('.carousel');
+            const carousel = document.querySelector('.carousel1');
             const cards = document.querySelectorAll('.carousel-card1');
             currentIndex = (currentIndex + 1) % cards.length;
 
