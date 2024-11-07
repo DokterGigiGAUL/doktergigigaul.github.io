@@ -573,6 +573,22 @@
     </script>
     
 <script>
+    <script>
+        let currentIndex = 0;
+
+        function showNextCard() {
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.carousel-card1');
+            currentIndex = (currentIndex + 1) % cards.length;
+
+            const offset = -(currentIndex * (cards[0].offsetWidth + 15)); // Offset calculation with margin
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        setInterval(showNextCard, 2500); // Change every 2 seconds
+    </script>
+    
+<script>
   // Set the date we're counting down to
   var countDownDate = new Date("Nov 15, 2024 00:00:00").getTime();
 
