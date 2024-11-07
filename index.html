@@ -272,7 +272,7 @@
             transition: transform 0.5s ease-in-out;
         }
 
-        .carousel-card {
+        .carousel-card1 {
             flex: 0 0 85%; /* 85% width for the visible card */
             margin-right: 20px; /* Space for the next card to peek */
             box-sizing: border-box;
@@ -374,7 +374,7 @@
             gap: 1rem;
             justify-content: center;
         }
-            .carousel-card1 {
+            .carousel-card {
             flex: 0 0 90%; /* 90% width for the visible card */
             margin-right: 20px; /* Space for the next card to peek */
             box-sizing: border-box;
@@ -402,7 +402,7 @@
                 border-radius: 15px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
-            .carousel-card1 {
+            .carousel-card {
             flex: 0 0 50%; /* 90% width for the visible card */
             margin-right: 20px; /* Space for the next card to peek */
             box-sizing: border-box;
@@ -564,8 +564,8 @@
         let currentIndex = 0;
 
         function showNextCard() {
-            const carousel = document.querySelector('.carousel');
-            const cards = document.querySelectorAll('.carousel-card');
+            const carousel = document.querySelector('.carousel1');
+            const cards = document.querySelectorAll('.carousel-card1');
             currentIndex = (currentIndex + 1) % cards.length;
 
             const offset = -(currentIndex * (cards[0].offsetWidth + 15)); // Offset calculation with margin
@@ -579,8 +579,8 @@
         let currentIndex = 0;
 
         function showNextCard() {
-            const carousel = document.querySelector('.carousel1');
-            const cards = document.querySelectorAll('.carousel-card1');
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.carousel-card');
             currentIndex = (currentIndex + 1) % cards.length;
 
             const offset = -(currentIndex * (cards[0].offsetWidth + 15)); // Offset calculation with margin
