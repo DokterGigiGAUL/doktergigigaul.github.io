@@ -330,7 +330,7 @@ header p {
             border: 0px solid #ddd;
             border-radius: 20px;
             /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
-            padding: 1.5rem;
+            padding: 15px 30px;
             text-align: center;
             flex: 1 1 300px;
             max-width: 100%;
