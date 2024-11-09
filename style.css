@@ -184,6 +184,10 @@ header p {
             text-align: center;
             margin-top: 10px;
         }
+.cta-button-container p {
+	font-size:11px;padding-top:5px;margin-top:0px;
+            text-align: center;
+        }
         .cta {
             background-color: #0071e3;
             color: white;
@@ -269,30 +273,36 @@ header p {
         background-color: #0071e305;
     }
 
-    .share-webinar h2 {
-        font-size: 2em;
+.share-webinar h2 {
+	font-size: 2em;
         letter-spacing:-0.5px;
-            font-size: 1.8em;
+	font-size: 1.8em;
         font-weight:800;
-            color: #111111;
+	color: #111111;
         margin-top:0px;
+	padding-top:10px
     }
 
-    .share-buttons {
+.share-webinar p {
+	font-color:#111111;
+	font-weight:400;
+}
+
+.share-buttons {
         display: flex;
         justify-content: center;
         gap: 15px;
         margin-top: 0px;
-    }
+}
 
-    .share-button {
+.share-button {
         display: inline-block;
         padding: 10px 20px;
         text-decoration: none;
         color: white;
         border-radius: 80px;
         font-weight: bold;
-    }
+}
 
     .whatsapp { background-color: #009900; }
     .facebook { background-color: #3b5998; }
