@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7faf8">
+<title>drg. Agam Ferry Erwana, Sp.PM | Dokter Penyakit Mulut</title>
+<style>
+:root{--green:#2e7168;--dark:#193b36;--soft:#eaf3ef;--text:#29423d;--muted:#6c7e78;--line:#dce7e1;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;background:#f9fbf9;color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1040px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#f9fbf9ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;color:var(--dark);line-height:1.25}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:.75rem;margin-top:4px}
+.links{display:flex;align-items:center;gap:24px;font-size:.9rem}
+.links a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:999px;border:1px solid var(--green);font-weight:700;font-size:.9rem;cursor:pointer}
+.primary{background:var(--green);color:#fff}
+.secondary{background:transparent;color:var(--green)}
+.menu{display:none;background:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:var(--dark)}
+.hero{padding:76px 0;background:linear-gradient(120deg,#f2f8f5,#e5f1eb)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px}
+.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:800}
+h1{font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.08;letter-spacing:-.05em;color:var(--dark);margin:14px 0 20px}
+h1 span{color:var(--green)}
+p{margin:0 0 16px}
+.intro{font-size:1.05rem;color:var(--muted);max-width:570px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.portrait{min-height:300px;border-radius:48% 48% 22px 22px;background:#d5e9df;display:grid;place-items:center;position:relative;overflow:hidden}
+.portrait .initials{font-size:5rem;font-weight:800;color:#2e7168;opacity:.85}
+.portrait small{position:absolute;bottom:0;left:0;right:0;text-align:center;background:#ffffffdf;padding:13px;font-weight:700}
+section{padding:68px 0}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.7rem);line-height:1.2;letter-spacing:-.04em;color:var(--dark);margin:8px 0 14px}
+.section-intro{color:var(--muted);max-width:650px}
+.highlights{padding:20px 0;background:white;border-bottom:1px solid var(--line)}
+.highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.highlight{padding:10px 14px;border-right:1px solid var(--line)}
+.highlight:last-child{border:0}
+.highlight strong{display:block;color:var(--dark)}
+.highlight span{font-size:.85rem;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.simple-card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.simple-card h3{margin:0 0 10px;color:var(--dark);font-size:1.1rem}
+.simple-card p{color:var(--muted);font-size:.93rem}
+ul.clean{padding-left:19px;margin:0;color:var(--muted)}
+ul.clean li{padding:4px 0}
+.services{background:#f0f6f2}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.service-card{padding:21px;border-radius:17px;background:white;border:1px solid var(--line)}
+.service-card h3{font-size:1rem;margin:0 0 8px;color:var(--dark)}
+.service-card p{font-size:.88rem;color:var(--muted);margin:0}
+.article-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.article{padding:20px;border:1px solid var(--line);border-radius:16px;background:white}
+.article span{font-size:.75rem;font-weight:800;color:var(--green)}
+.article h3{font-size:1rem;line-height:1.4;margin:8px 0;color:var(--dark)}
+.article p{font-size:.85rem;color:var(--muted);margin:0}
+.practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}
+.practice-card{padding:24px;background:white;border:1px solid var(--line);border-radius:18px}
+.practice-card h3{margin:0 0 8px;color:var(--dark)}
+.practice-card p{color:var(--muted);font-size:.9rem}
+.note{font-size:.8rem!important}
+.booking{background:var(--soft)}
+.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+form{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:750}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:#fcfdfc;color:var(--text)}
+textarea{min-height:90px;resize:vertical}
+.form-note{font-size:.78rem;color:var(--muted);margin:14px 0}
+form button{width:100%}
+footer{background:var(--dark);color:white;padding:36px 0 22px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:start}
+footer p,footer small{color:#c3d6cf;font-size:.83rem}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem}
+.disclaimer{border-top:1px solid #ffffff2a;padding-top:18px;margin-top:22px}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#23845b;color:white;border:0;border-radius:999px;padding:12px 16px;font-weight:750;box-shadow:0 6px 20px #183b3625;cursor:pointer}
+.toast{position:fixed;left:50%;bottom:76px;transform:translate(-50%,15px);opacity:0;pointer-events:none;background:var(--dark);color:white;padding:13px 18px;border-radius:12px;font-size:.88rem;transition:.2s;max-width:calc(100% - 30px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){
+ .hero{padding:52px 0}.hero-grid,.about-grid,.booking-grid{grid-template-columns:1fr;gap:24px}
+ .portrait{min-height:220px;max-width:380px;width:100%;margin:auto}
+ .portrait .initials{font-size:4rem}
+ .links{display:none;position:absolute;top:69px;left:0;right:0;padding:14px 20px 20px;background:#f9fbf9;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
+ .links.open{display:flex}.links a{padding:10px 0}.menu{display:block}.nav-cta{display:none}
+ .highlight-grid{grid-template-columns:1fr;gap:6px}.highlight{border-right:0;border-bottom:1px solid var(--line);padding:10px 0}.highlight:last-child{border:0}
+ .service-grid,.article-list,.practice-grid{grid-template-columns:1fr}
+ section{padding:52px 0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .footer-row{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Navigasi utama">
+    <a class="brand" href="#beranda">drg. Agam Ferry Erwana, Sp.PM<small>Dokter Spesialis Penyakit Mulut</small></a>
+    <button class="menu" id="menu" aria-expanded="false" aria-label="Buka menu">☰</button>
+    <div class="links" id="links">
+      <a href="#tentang">Tentang</a><a href="#layanan">Layanan</a><a href="#edukasi">Edukasi</a><a href="#praktik">Praktik</a>
+    </div>
+    <a class="btn primary nav-cta" href="#reservasi">Buat Janji</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="beranda">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker">Spesialis Penyakit Mulut</div>
+        <h1>Masalah di mulut, <span>bukan cuma gigi.</span></h1>
+        <p class="intro">Informasi dan layanan evaluasi kelainan rongga mulut serta manifestasi oral dari kondisi kesehatan umum, dengan pendekatan klinis yang terarah dan berbasis bukti.</p>
+        <div class="actions"><a class="btn primary" href="#reservasi">Buat Janji Konsultasi</a><a class="btn secondary" href="#layanan">Lihat Layanan</a></div>
+      </div>
+      <div class="portrait" role="img" aria-label="Tempat untuk foto profil dokter"><span class="initials">AF</span><small>drg. Agam Ferry Erwana, Sp.PM</small></div>
+    </div>
+  </section>
+  <div class="highlights"><div class="container highlight-grid">
+    <div class="highlight"><strong>Spesialis Penyakit Mulut</strong><span>Fokus pada kelainan rongga mulut</span></div>
+    <div class="highlight"><strong>Pendekatan menyeluruh</strong><span>Mempertimbangkan kondisi kesehatan umum</span></div>
+    <div class="highlight"><strong>Edukasi pasien</strong><span>Informasi jelas untuk keputusan perawatan</span></div>
+  </div></div>
+  <section id="tentang"><div class="container">
+    <div class="kicker">Tentang Dokter</div><h2 class="section-title">Memahami keluhan sebelum menentukan langkah.</h2>
+    <p class="section-intro">Kelainan di rongga mulut dapat memiliki beragam penyebab. Evaluasi dilakukan dengan mempertimbangkan riwayat keluhan, pemeriksaan klinis, dan pemeriksaan tambahan bila diperlukan.</p>
+    <div class="about-grid" style="margin-top:26px">
+      <div class="simple-card"><h3>Profil singkat</h3><p>drg. Agam Ferry Erwana, Sp.PM adalah dokter gigi spesialis Penyakit Mulut. Bagian ini dapat dilengkapi dengan biografi profesional, pengalaman klinis, dan aktivitas akademik yang telah diverifikasi.</p></div>
+      <div class="simple-card"><h3>Pendidikan & kompetensi</h3><ul class="clean"><li>Pendidikan dokter gigi — tambahkan institusi dan tahun.</li><li>Pendidikan spesialis Penyakit Mulut — tambahkan institusi dan tahun.</li><li>Sertifikasi dan kegiatan profesional — tambahkan data resmi.</li></ul></div>
+    </div>
+  </div></section>
+  <section class="services" id="layanan"><div class="container">
+    <div class="kicker">Layanan Spesialis</div><h2 class="section-title">Area layanan</h2><p class="section-intro">Contoh ruang lingkup layanan yang dapat disesuaikan dengan kompetensi, fasilitas, dan alur rujukan yang berlaku.</p>
+    <div class="service-grid">
+      <article class="service-card"><h3>Kelainan mukosa mulut</h3><p>Evaluasi bercak putih atau merah, luka menetap, benjolan, dan perubahan jaringan rongga mulut.</p></article>
+      <article class="service-card"><h3>Ulserasi berulang</h3><p>Penilaian sariawan atau luka mulut yang sering kambuh, luas, atau sulit sembuh.</p></article>
+      <article class="service-card"><h3>Kelainan lidah & sensasi oral</h3><p>Evaluasi perubahan lidah, rasa terbakar, nyeri, atau perubahan sensasi.</p></article>
+      <article class="service-card"><h3>Manifestasi oral penyakit sistemik</h3><p>Menilai keluhan mulut dalam konteks kondisi kesehatan umum pasien.</p></article>
+      <article class="service-card"><h3>Keluhan terkait obat atau terapi</h3><p>Evaluasi mulut kering, perubahan rasa, dan keluhan oral selama terapi medis.</p></article>
+      <article class="service-card"><h3>Perawatan mulut khusus</h3><p>Pendekatan individual bagi pasien dengan kebutuhan atau kondisi medis kompleks.</p></article>
+    </div>
+  </div></section>
+  <section id="edukasi"><div class="container">
+    <div class="kicker">Edukasi Pasien</div><h2 class="section-title">Informasi kesehatan mulut</h2><p class="section-intro">Artikel berikut merupakan contoh topik untuk dikembangkan menjadi konten edukasi lengkap.</p>
+    <div class="article-list">
+      <article class="article"><span>KELAINAN MUKOSA</span><h3>Kapan luka di mulut perlu diperiksa?</h3><p>Luka yang menetap, membesar, atau berulang sebaiknya dievaluasi secara profesional.</p></article>
+      <article class="article"><span>GEJALA ORAL</span><h3>Mengapa mulut terasa kering?</h3><p>Mulut kering dapat berkaitan dengan obat, kondisi kesehatan, atau faktor lain.</p></article>
+      <article class="article"><span>DETEKSI DINI</span><h3>Mengenali perubahan jaringan mulut</h3><p>Kenali perubahan yang perlu diperhatikan dan kapan mencari bantuan.</p></article>
+    </div>
+  </div></section>
+  <section class="services" id="praktik"><div class="container">
+    <div class="kicker">Lokasi & Jadwal</div><h2 class="section-title">Informasi praktik</h2><p class="section-intro">Konfirmasikan jadwal dan ketersediaan langsung kepada fasilitas kesehatan sebelum berkunjung.</p>
+    <div class="practice-grid">
+      <article class="practice-card"><h3>RS Juanda Kuningan</h3><p>Poliklinik / layanan Penyakit Mulut</p><p><strong>Jadwal:</strong> konfirmasi kepada rumah sakit.</p><p class="note">Alamat dan jadwal resmi perlu ditambahkan sebelum publikasi.</p></article>
+      <article class="practice-card"><h3>Informasi pendaftaran</h3><p>Gunakan formulir di bawah untuk menyampaikan permintaan informasi jadwal konsultasi.</p><a class="btn secondary" href="#reservasi">Tanyakan Jadwal</a></article>
+    </div>
+  </div></section>
+  <section class="booking" id="reservasi"><div class="container booking-grid">
+    <div><div class="kicker">Reservasi</div><h2 class="section-title">Permintaan janji konsultasi</h2><p class="section-intro">Isi informasi dasar berikut. Versi demo ini menampilkan konfirmasi di browser dan belum mengirim data ke klinik.</p></div>
+    <form id="bookingForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Nama lengkap *</label><input id="name" name="name" required autocomplete="name" placeholder="Nama Anda"></div>
+        <div class="field"><label for="phone">Nomor WhatsApp *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="08xxxxxxxxxx"></div>
+        <div class="field"><label for="type">Jenis kunjungan *</label><select id="type" name="type" required><option value="">Pilih jenis</option><option>Konsultasi pertama</option><option>Kunjungan kontrol</option><option>Menanyakan jadwal</option></select></div>
+        <div class="field"><label for="date">Tanggal pilihan</label><input id="date" name="date" type="date"></div>
+        <div class="field full"><label for="message">Catatan singkat (opsional)</label><textarea id="message" name="message" placeholder="Tuliskan pertanyaan singkat. Hindari data medis sensitif."></textarea></div>
+      </div>
+      <p class="form-note">Data tidak dikirim atau disimpan oleh mockup ini. Hubungkan ke layanan reservasi sebelum digunakan secara nyata.</p>
+      <button class="btn primary" type="submit">Kirim Permintaan</button>
+    </form>
+  </div></section>
+</main>
+<footer><div class="container">
+  <div class="footer-row"><div><strong>drg. Agam Ferry Erwana, Sp.PM</strong><p>Dokter Gigi Spesialis Penyakit Mulut</p></div><div class="footer-links"><a href="#tentang">Tentang</a><a href="#layanan">Layanan</a><a href="#edukasi">Edukasi</a><a href="#reservasi">Reservasi</a></div></div>
+  <div class="disclaimer"><small>Disclaimer: Informasi pada situs ini bersifat edukatif dan tidak menggantikan pemeriksaan atau konsultasi langsung dengan tenaga kesehatan. Jadwal praktik perlu dikonfirmasi kepada fasilitas terkait.</small></div>
+  <p style="margin:18px 0 0"><small>© <span id="year"></span> drg. Agam Ferry Erwana, Sp.PM</small></p>
+</div></footer>
+<button class="whatsapp" id="whatsapp" type="button">WhatsApp</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const menu=document.getElementById('menu');
+const links=document.getElementById('links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+const toast=document.getElementById('toast');
+let toastTimer;
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),4000);}
+const date=document.getElementById('date');
+const today=new Date();date.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;showToast('Permintaan berhasil disimulasikan. Formulir belum mengirim data.');e.currentTarget.reset();});
+document.getElementById('whatsapp').addEventListener('click',()=>{
+  const whatsappNumber=''; // Isi nomor resmi, contoh: 6281234567890
+  if(!whatsappNumber){showToast('Nomor WhatsApp resmi belum diatur di kode HTML.');return;}
+  window.open('https://wa.me/'+whatsappNumber+'?text='+encodeURIComponent('Halo, saya ingin menanyakan konsultasi Penyakit Mulut.'),'_blank','noopener,noreferrer');
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
